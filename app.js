@@ -35,15 +35,20 @@ class UssShip {
 this.hull = 20,
 this.firepower = 5,
 this.accuracy = .7;
-    }
+this.attack () {
+    
+}
+
+
+
 // 3. Make a method for USS_Schwarzenegger to attack
- attack () {
-    console.log(alert('You just attacked the enemy!'))
- }
+//  attack () {
+//     console.log(alert('You just attacked the enemy!'))
+//  }
 
 }
 
-const schwarz = new ussShip
+const schwarz = new UssShip
 
 console.log(schwarz)
 
@@ -57,11 +62,20 @@ this.accuracy = (Math.floor(Math.random() * 3) + 6)/ 10;
     }
 }
 
-const enemy = new alienShip
+const enemy = new AlienShip
 
 console.log(enemy)
 
+let enemy = [enemy1, enemy2, enemy3, enemy4, enemy5];
+for (let i = 0; i<7; i++) {
+    enemy[i] = new Enemy();
+}
 
+let attack = function() {
+    for (let i = 0; i < enemy.length; i++) {
+        enemy[i].attack();
+    }
+}
 
 // if (hull <= 0) {
 //     console.log(alert(' The alien ship has been destroyed!'))
